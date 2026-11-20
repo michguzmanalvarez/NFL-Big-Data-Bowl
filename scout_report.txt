@@ -1,0 +1,219 @@
+
+================================================================================
+games.csv  ->  122 filas x 7 columnas
+================================================================================
+                  dtype  nulos_%  unicos     ejemplo
+gameId            int64      0.0     122  2021090900
+season            int64      0.0       1        2021
+week              int64      0.0       8           1
+gameDate         object      0.0      24  09/09/2021
+gameTimeEastern  object      0.0       6    20:20:00
+homeTeamAbbr     object      0.0      32          TB
+visitorTeamAbbr  object      0.0      32         DAL
+
+================================================================================
+pffScoutingData.csv  ->  188,254 filas x 15 columnas
+================================================================================
+                          dtype  nulos_%  unicos     ejemplo
+gameId                    int64      0.0     122  2021090900
+playId                    int64      0.0    3762          97
+nflId                     int64      0.0    1679       25511
+pff_role                 object      0.0       5        Pass
+pff_positionLinedUp      object      0.0      56          QB
+pff_hit                 float64     50.0       2         0.0
+pff_hurry               float64     50.0       2         1.0
+pff_sack                float64     50.0       2         0.0
+pff_beatenByDefender    float64     74.5       2         0.0
+pff_hitAllowed          float64     74.5       2         0.0
+pff_hurryAllowed        float64     74.5       2         0.0
+pff_sackAllowed         float64     74.5       2         0.0
+pff_nflIdBlockedPlayer  float64     75.3     665     44955.0
+pff_blockType            object     74.6      12          SW
+pff_backFieldBlock      float64     74.6       2         0.0
+
+================================================================================
+players.csv  ->  1,679 filas x 7 columnas
+================================================================================
+                   dtype  nulos_%  unicos     ejemplo
+nflId              int64      0.0    1679       25511
+height            object      0.0      16         6-4
+weight             int64      0.0     176         225
+birthDate         object     13.8    1174  1977-08-03
+collegeName       object     13.3     236    Michigan
+officialPosition  object      0.0      19          QB
+displayName       object      0.0    1671   Tom Brady
+
+================================================================================
+plays.csv  ->  8,557 filas x 32 columnas
+================================================================================
+                          dtype  nulos_%  unicos                                                            ejemplo
+gameId                    int64      0.0     122                                                         2021090900
+playId                    int64      0.0    3762                                                                 97
+playDescription          object      0.0    8555  (13:33) (Shotgun) T.Brady pass incomplete deep right to C.Godwin.
+quarter                   int64      0.0       5                                                                  1
+down                      int64      0.0       5                                                                  3
+yardsToGo                 int64      0.0      32                                                                  2
+possessionTeam           object      0.0      32                                                                 TB
+defensiveTeam            object      0.0      32                                                                DAL
+yardlineSide             object      1.5      32                                                                 TB
+yardlineNumber            int64      0.0      50                                                                 33
+gameClock                object      0.0     898                                                              13:33
+preSnapHomeScore          int64      0.0      42                                                                  0
+preSnapVisitorScore       int64      0.0      38                                                                  0
+passResult               object      0.0       5                                                                  I
+penaltyYards            float64     91.2      60                                                                0.0
+prePenaltyPlayResult      int64      0.0      98                                                                  0
+playResult                int64      0.0     102                                                                  0
+foulName1                object     91.4      29                                               Illegal Use of Hands
+foulNFLId1              float64     91.4     486                                                            52459.0
+foulName2                object     99.6      15                                              Unnecessary Roughness
+foulNFLId2              float64     99.6      30                                                            44955.0
+foulName3                object    100.0       1                                                    Illegal Contact
+foulNFLId3              float64    100.0       1                                                            46190.0
+absoluteYardlineNumber  float64      0.0      99                                                               43.0
+offenseFormation         object      0.1       7                                                            SHOTGUN
+personnelO               object      0.0      30                                                   1 RB, 1 TE, 3 WR
+defendersInBox          float64      0.1      11                                                                6.0
+personnelD               object      0.0      29                                                   4 DL, 2 LB, 5 DB
+dropBackType             object      6.2       8                                                        TRADITIONAL
+pff_playAction            int64      0.0       2                                                                  0
+pff_passCoverage         object      0.0      12                                                            Cover-1
+pff_passCoverageType     object      0.0       3                                                                Man
+
+================================================================================
+tracking (muestra: tracking_2021090900.csv)  ->  92,644 filas x 16 columnas
+================================================================================
+                 dtype  nulos_%  unicos               ejemplo
+gameId           int64      0.0       1            2021090900
+playId           int64      0.0      97                    97
+nflId          float64      4.3      69               25511.0
+frameId          int64      0.0     177                     1
+time            object      0.0     491  2021-09-10T00:26:31Z
+jerseyNumber   float64      4.3      56                  12.0
+team            object      0.0       3                    TB
+playDirection   object      0.0       2                 right
+x              float64      0.0   10386                 37.77
+y              float64      0.0    4855                 24.22
+s              float64      0.0    1274                  0.29
+a              float64      0.0     967                   0.3
+dis            float64      0.0     296                  0.03
+o              float64      4.3   29089                165.16
+dir            float64      4.3   32096                 84.99
+event           object     92.8      15             ball_snap
+
+================================================================================
+TRACKING GLOBAL: 122 archivos, 8,314,178 filas
+================================================================================
+Columnas consistentes en todos los archivos: True
+x: -3.55 .. 121.15   y: -4.53 .. 57.72
+playDirection: {'right': 4026472, 'left': 4287706}
+team (top): {'football': 361486, 'WAS': 288717, 'KC': 286132, 'TB': 282194, 'MIA': 277596}
+
+Eventos (todos):
+  ball_snap                        196,236
+  pass_forward                     173,604
+  autoevent_ballsnap                86,641
+  autoevent_passforward             85,882
+  play_action                       45,471
+  run                               10,902
+  qb_sack                           10,373
+  pass_arrived                       8,441
+  autoevent_passinterrupted          4,623
+  man_in_motion                      4,071
+  line_set                           3,220
+  shift                              3,059
+  pass_tipped                        2,553
+  first_contact                      1,840
+  qb_strip_sack                      1,334
+  pass_outcome_incomplete              920
+  pass_outcome_caught                  529
+  fumble                               391
+  fumble_offense_recovered             253
+  handoff                              230
+  huddle_break_offense                  69
+  tackle                                69
+  penalty_flag                          46
+  lateral                               23
+  dropped_pass                          23
+  out_of_bounds                         23
+
+================================================================================
+TIME TO THROW (derivado de tracking)
+================================================================================
+Jugadas con snap y evento final: 8,500 de 8,557 en plays.csv
+                count  mean   std  min   25%  50%  75%  max
+end_event                                                  
+fumble           13.0  1.15  0.92  0.5  0.70  0.8  1.0  3.4
+pass_forward   7515.0  2.94  1.01  0.9  2.30  2.7  3.3  9.8
+qb_sack         446.0  4.54  1.15  2.0  3.80  4.4  5.0  9.6
+qb_strip_sack    55.0  3.44  1.03  2.2  2.75  3.3  3.8  7.8
+run             471.0  4.31  1.23  1.2  3.40  4.2  5.0  8.7
+
+================================================================================
+INTEGRIDAD DE LLAVES
+================================================================================
+games    ['gameId'] -> filas 122, duplicados 0
+plays    ['gameId', 'playId'] -> filas 8,557, duplicados 0
+players  ['nflId'] -> filas 1,679, duplicados 0
+pff      ['gameId', 'playId', 'nflId'] -> filas 188,254, duplicados 0
+gameIds en games.csv: 122  | archivos tracking: 122  | games sin tracking: 0
+plays con datos PFF: 8557 de 8557
+
+================================================================================
+CHECKLIST DE REQUERIMIENTOS
+================================================================================
+games           ['gameTimeEastern', 'homeTeamAbbr', 'visitorTeamAbbr']
+pffScoutingData ['pff_hit', 'pff_hurry', 'pff_sack', 'pff_hitAllowed', 'pff_hurryAllowed', 'pff_sackAllowed']
+players         []
+plays           ['down', 'yardsToGo', 'possessionTeam', 'defensiveTeam', 'preSnapHomeScore', 'preSnapVisitorScore', 'penaltyYards', 'prePenaltyPlayResult', 'foulName1', 'foulNFLId1', 'foulName2', 'foulNFLId2', 'foulName3', 'foulNFLId3', 'defendersInBox']
+tracking        ['time', 'team', 'playDirection', 'x', 'y', 'dir']
+
+[1] Equipos H2H: possessionTeam / defensiveTeam
+possessionTeam  defensiveTeam
+MIA             BUF              85
+NYJ             NE               84
+IND             TEN              82
+DET             SF               67
+TEN             IND              62
+Equipos: ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAX', 'KC', 'LA', 'LAC', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS']
+
+[3] Penalties
+Jugadas con foulName1: 736 | penaltyYards != 0: 616
+foulName1
+Defensive Pass Interference    145
+Offensive Holding              144
+Defensive Holding               76
+Roughing the Passer             61
+Defensive Offside               48
+Illegal Use of Hands            44
+Unnecessary Roughness           44
+Offensive Pass Interference     37
+Face Mask (15 Yards)            24
+Illegal Contact                 21
+
+[4] Presi├│n (PFF)
+  pff_hit            suma=843
+  pff_hurry          suma=2,877
+  pff_sack           suma=602
+  pff_hitAllowed     suma=544
+  pff_hurryAllowed   suma=2,083
+  pff_sackAllowed    suma=370
+passResult: {'C': 4620, 'I': 2755, 'S': 543, 'R': 449, 'IN': 190}
+
+[5] Situaci├│n
+        quarter     down  yardsToGo gameClock  preSnapHomeScore  preSnapVisitorScore  absoluteYardlineNumber
+count   8557.00  8557.00    8557.00      8557           8557.00              8557.00                 8556.00
+unique      NaN      NaN        NaN       898               NaN                  NaN                     NaN
+top         NaN      NaN        NaN     15:00               NaN                  NaN                     NaN
+freq        NaN      NaN        NaN       172               NaN                  NaN                     NaN
+mean       2.62     1.97       8.72       NaN             11.67                11.26                   59.25
+std        1.13     0.87       3.91       NaN              9.82                10.03                   23.66
+min        1.00     0.00       0.00       NaN              0.00                 0.00                   11.00
+25%        2.00     1.00       6.00       NaN              3.00                 3.00                   40.00
+50%        3.00     2.00      10.00       NaN             10.00                10.00                   59.00
+75%        4.00     3.00      10.00       NaN             17.00                17.00                   79.00
+max        5.00     4.00      39.00       NaN             54.00                44.00                  109.00
+
+[6] EPA / WPA / EP / WP
+Columnas encontradas: NINGUNA
+EXIT=0

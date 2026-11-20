@@ -1,0 +1,22 @@
+.venv/
+.hackathon/.tools/
+.hackathon/.cache/
+.hackathon/.bootstrap/
+.hackathon/setup.log
+node_modules/
+dist/
+__pycache__/
+
+# Datos pesados (≈820 MB): se descargan aparte, ver README
+data/tracking/
+# Registro local del setup (rutas y datos del equipo)
+setup-log.txt
+*.zip
+
+# Llaves y credenciales: nunca al repositorio
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
